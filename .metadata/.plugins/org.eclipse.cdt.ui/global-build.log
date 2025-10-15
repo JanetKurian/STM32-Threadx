@@ -1,0 +1,38 @@
+00:13:48 **** Incremental Build of configuration Debug for project Application ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/system_stm32h7xx.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32h7xx.d" -MT"Core/Src/system_stm32h7xx.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32h7xx.o"
+arm-none-eabi-gcc -o "Application.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\janet\STM32CubeIDE\workspace_1.7.0\Application\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Application.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Application.elf
+ 
+arm-none-eabi-size   Application.elf 
+arm-none-eabi-objdump -h -S  Application.elf  > "Application.list"
+arm-none-eabi-objcopy  -O binary  Application.elf  "Application.bin"
+   text	   data	    bss	    dec	    hex	filename
+  26892	    316	   1940	  29148	   71dc	Application.elf
+Finished building: default.size.stdout
+ 
+Finished building: Application.bin
+ 
+Finished building: Application.list
+ 
+00:14:16 **** Incremental Build of configuration Debug for project ota ****
+make -j12 all 
+arm-none-eabi-size   ota.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26932	    316	   1940	  29188	   7204	ota.elf
+Finished building: default.size.stdout
+ 
+00:17:04 **** Incremental Build of configuration Debug for project Application ****
+make -j12 all 
+arm-none-eabi-size   Application.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26892	    316	   1940	  29148	   71dc	Application.elf
+Finished building: default.size.stdout
+ 
+00:28:22 **** Incremental Build of configuration Debug for project ota ****
+make -j12 all 
+arm-none-eabi-size   ota.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26932	    316	   1940	  29188	   7204	ota.elf
+Finished building: default.size.stdout
+ 

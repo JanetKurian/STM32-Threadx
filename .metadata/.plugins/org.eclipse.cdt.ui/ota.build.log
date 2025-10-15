@@ -1,0 +1,10 @@
+00:28:22 **** Incremental Build of configuration Debug for project ota ****
+make -j12 all 
+arm-none-eabi-size   ota.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26932	    316	   1940	  29188	   7204	ota.elf
+Finished building: default.size.stdout
+ 
+
+00:28:23 Build Finished. 0 errors, 0 warnings. (took 810ms)
+
